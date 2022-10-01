@@ -13,11 +13,8 @@ function DNA(num)
     // The genetic sequence
     this.genes = [];
     this.fitness = 0;
-    for (var i = 0; i < num; i++) 
-    {
-      this.genes[i] = newChar(); // Pick from range of chars
-    }
-  
+    for (var i = 0; i < num; i++) this.genes[i] = newChar(); // Pick from range of chars
+      
 
   // Converts character array to a String
   this.getPhrase=function() 
@@ -58,9 +55,7 @@ function DNA(num)
   {
     for (var i = 0; i < this.genes.length; i++) 
     {
-      if (random(1) < mutationRate) {
-        this.genes[i] = newChar();
-      }
+      if (random(1) < mutationRate) this.genes[i] = newChar();
     }
   }
 }
